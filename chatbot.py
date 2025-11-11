@@ -1,3 +1,5 @@
+#this is self explanitory just a simple price listing
+
 kawaii_items = {
     "Plushie": 8.99,
     "Enamal pins": 12.50,
@@ -5,6 +7,24 @@ kawaii_items = {
     "Kawaii Stationary": 1.99
 }
 
+##this part asks the name and age
+def namer()
+{
+    print("HAIII im your chatbot assistant! im happy to help you what every your heart desires!")
+    name = input("What is your name? ")
+    print("Oh welcome! " + name + "! you have such a cute name!")
+    age = input("how old are you? ")
+
+if age <= 13
+    print("Welcome!you will fit right in with our cute collection!")
+    print("but you will need permistion to buy our things with a perent/gardian <3")
+
+elif age >= 18
+    print("Welcome! you will fit right in with our very cute collection<3")
+
+}
+
+# the main part of the chatbot that comunicates with the user, though theres a bug in it that its annoying and i cant seem to find it:/
 def cute_chat():
     print("Welcome the Kawaii collection store!")
     while True:
@@ -13,19 +33,16 @@ def cute_chat():
             for item, price in kawaii_items.items():
                 print(f"{item.title()}: ${price}")
         elif "order" in user_input:
-            item = input("What would you like to order? ").lower()
+            item = input("What would you like to buy? ").lower()
             if item in kawaii_items:
-                print(f"Bot: You have ordered {item}. Your total is ${kawaii_items[item]:.2f}")
+                print(f"You have ordered {item}. Your total is ${kawaii_items[item]:.2f}")
             else:
                 print(" Sorry, we don't have that item available/out of stock.")
         elif "special" in user_input:
             print("We have a adorable deal! get two new stocks of cuteness!! >w<")
-        elif "reservation" in user_input:
-            name = input("Name for reservation: ")
-            time = input("Time for reservation: ")
-            print(f"Bot: Reservation made for {name} at {time}.")
+        
         elif "exit" in user_input or "bye" in user_input:
-            print("Bot: Thank you! See you soon!")
+            print(" Thank you! See you soon!")
             break
         else:
-            print("Bot: Sorry, I didn't understand that. Can you rephrase?")
+            print("Sorry, I didn't understand that. Can you retype that again please? >-<'")
